@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+* {
+  margin: 0px;
+  padding: 0px; }
+
+div.nav-bar {
+  width: 100%;
+  background-color: #000;
+  color: #FFF; }
+  div.nav-bar ul {
+    width: 60%;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center; }
+    div.nav-bar ul li {
+      list-style: none;
+      text-align: center;
+      font-family: 'Luckiest Guy', sans-serif;
+      font-size: 25px;
+      position: relative;
+      padding-right: 15px;
+      display: inline-block;
+      transition: bottom 0.5s ease; }
+      div.nav-bar ul li:hover {
+        bottom: -5px; }
+      div.nav-bar ul li:last-child {
+        padding-right: 0; }
+      div.nav-bar ul li a {
+        text-decoration: none;
+        color: #038C7F;
+        position: relative;
+        padding: 10px; }
+        div.nav-bar ul li a:after {
+          content: "";
+          display: block;
+          position: absolute;
+          height: 3px;
+          width: 0;
+          background-color: #801912;
+          transition: width 0.5s; }
+        div.nav-bar ul li a:hover:after {
+          width: 100%; }
+
+/*# sourceMappingURL=styles.css.map */
