@@ -8,6 +8,7 @@
   // overflow: auto;
 }
 
+@media screen and (min-width: 900px) {
 div.nav-bar{
   width: 100%;
   background-color: #000;
@@ -18,7 +19,6 @@ div.nav-bar{
     padding: 15px 0;
     text-align: center;
     li{
-      // background-color: #FFF;
       list-style: none;
       text-align: center;
       font-family: 'Luckiest Guy', sans-serif;
@@ -52,5 +52,13 @@ div.nav-bar{
         }
       }
     }
+  }
+}
+}
+
+@media screen and (max-width: 900px) {
+  div.nav-bar{
+      background-color: #fff;
+      color: #000;
   }
 }
