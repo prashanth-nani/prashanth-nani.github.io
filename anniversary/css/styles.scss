@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Abel);
+@import url(https://fonts.googleapis.com/css?family=Raleway:600,400,800);
+@import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
+
+//variables
+$fs: 15px;
+
+
+html, body{
+  margin: 0;
+  padding: 0;
+  //overflow: hidden;
+}
+
+body{
+  background: linear-gradient(
+  to right, rgba(96,0,255,1) 0%,
+   rgba(96,0,255,0.7) 50%),
+     url("../images/img1.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.typed-cursor{
+	opacity: 1;
+  color: #FFF;
+  font-size: $fs;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+@keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-moz-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+
+.text-box{
+  border-radius: 20px;
+  position: relative;
+  left: 30px;
+  top: 120px;
+  width: 40%;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.text{
+  font-family: 'Abel', sans-serif;
+  font-size: $fs;
+  text-transform: uppercase;
+  color: #EEE;
+  letter-spacing: 2px;
+}
+
+.heading{
+  position: relative;
+  top: 50px;
+  width: 50%;
+}
+
+.title{
+  text-align: center;
+  color: #F2F1F0;
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing: 5px;
+  font-size: 50px;
+  .happy{
+    color:#9E9E9E;
+  }
+  .ann{
+    color: #9E9E9E;
+  }
+  .item1{
+    color: #417D43;
+  }
+  .item2{
+    color: #923434;
+  }
+  .item3{
+    color: #349289;
+  }
+  .item4{
+    color: #92683E;
+  }
+  .item5{
+    color: #B3C32E;
+  }
+  .item6{
+    color: #BD37A7;
+  }
+  .item7{
+    color: #3A3439;
+  }
+}
+
+.heart{
+  width: 90px;
+  height: 90px;
+  float: right;
+  position: relative;
+  top: 220px;
+  right: 170px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    visibility: visible;
+  }
+  50%{
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.gif{
+  height: 80px;
+  width: 80px;
+  visibility: hidden;
+  animation: pulse 1s;
+  animation-iteration-count: 3;
+  animation-delay: 14s;
+}
