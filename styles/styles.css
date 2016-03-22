@@ -1,0 +1,29 @@
+#profile-pic{
+	border-radius: 50%;
+}
+
+#space{
+	height: 150px;
+	width: 100%;
+}
+body{
+	background:  
+    linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ),
+    url(../images/bg2.jpg);
+    font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+#social a{
+	text-decoration: none;
+	color: #FFFFFF;
+	border: solid #000000 3px;
+	border-radius: 15px;
+	padding: 7px;
+}
+
+.social{
+	margin-bottom: 25px;
+}
