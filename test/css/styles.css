@@ -1,51 +1,108 @@
 @import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 @import url(https://fonts.googleapis.com/css?family=Oswald);
-* {
-  margin: 0px;
-  padding: 0px; }
+html {
+  box-sizing: border-box;
+}
 
-@media screen and (min-width: 900px) {
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
+}
+
+@media screen and (min-width: 0px) {
   div.nav-bar {
     width: 100%;
-    background-color: #000;
-    color: #FFF; }
-    div.nav-bar ul {
-      width: 60%;
-      margin: 0 auto;
-      padding: 15px 0;
-      text-align: center; }
-      div.nav-bar ul li {
-        list-style: none;
-        text-align: center;
-        font-family: 'Luckiest Guy', sans-serif;
-        font-size: 25px;
-        position: relative;
-        padding-right: 15px;
-        display: inline-block;
-        transition: bottom 0.5s ease; }
-        div.nav-bar ul li:hover {
-          bottom: -5px; }
-        div.nav-bar ul li:last-child {
-          padding-right: 0; }
-        div.nav-bar ul li a {
-          text-decoration: none;
-          color: #038C7F;
-          position: relative;
-          padding: 10px; }
-          div.nav-bar ul li a:after {
-            content: "";
-            display: block;
-            position: absolute;
-            height: 3px;
-            width: 0;
-            background-color: #801912;
-            transition: width 0.5s; }
-          div.nav-bar ul li a:hover:after {
-            width: 100%; } }
-@media screen and (max-width: 900px) {
-  div.nav-bar {
-    background-color: #fff;
-    color: #000; } }
+    background-color: #1C1C1C;
+    color: #FFF;
+  }
+  div.nav-bar ul {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 0;
+  }
+  div.nav-bar ul li {
+    list-style: none;
+    text-align: center;
+    font-family: 'Luckiest Guy', sans-serif;
+    font-size: 25px;
+    position: relative;
+    padding-right: 15px;
+    display: inline-block;
+    transition: bottom 0.5s ease;
+  }
+}
 
-/*# sourceMappingURL=styles.css.map */
+@media screen and (min-width: 0px) and (max-width: 835px) {
+  div.nav-bar ul li {
+    font-size: 20px;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 0px) and (min-width: 835px) {
+  div.nav-bar ul li:hover {
+    bottom: -5px;
+  }
+  div.nav-bar ul li:last-child {
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  div.nav-bar ul li a {
+    text-decoration: none;
+    color: #F0FFFF;
+    position: relative;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 0px) and (min-width: 835px) {
+  div.nav-bar ul li a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background-color: #801912;
+    transition: width 0.5s;
+  }
+  div.nav-bar ul li a:hover:after {
+    width: 100%;
+  }
+}
+
+.container {
+  width: 100%;
+}
+
+.profile {
+  width: 100%;
+  height: calc(100vh - 55px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile .img-box {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile .img-box img {
+  height: 200px;
+  width: 200px;
+  transition: all 0.5s ease;
+}
+
+.profile .img-box img:hover {
+  transform: scale(1.1);
+}
+
+@font-face {
+  font-family: Pops;
+  src: url("../fonts/pops.ttf");
+}
