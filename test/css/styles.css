@@ -1,33 +1,38 @@
-@import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-@import url(https://fonts.googleapis.com/css?family=Oswald);
+@font-face {
+  font-family: "BebasNeue Regular";
+  src: url("../fonts/BebasNeueRegular.ttf");
+}
+
 html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:after,
+*:before {
   box-sizing: inherit;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
-@media screen and (min-width: 0px) {
+@media screen and (min-width: 0) {
   div.nav-bar {
     width: 100%;
-    background-color: #1C1C1C;
-    color: #FFF;
+    background-color: #181717;
   }
   div.nav-bar ul {
     width: 60%;
     margin: 0 auto;
     text-align: center;
-    padding: 15px 0;
+    padding: 20px 0 15px;
   }
   div.nav-bar ul li {
     list-style: none;
     text-align: center;
-    font-family: 'Luckiest Guy', sans-serif;
-    font-size: 25px;
+    font-family: "BebasNeue Regular", sans-serif;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: 30px;
     position: relative;
     padding-right: 15px;
     display: inline-block;
@@ -35,39 +40,36 @@ html {
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 835px) {
+@media screen and (min-width: 0) and (max-width: 835px) {
   div.nav-bar ul li {
     font-size: 20px;
     display: block;
   }
 }
 
-@media screen and (min-width: 0px) and (min-width: 835px) {
-  div.nav-bar ul li:hover {
-    bottom: -5px;
-  }
+@media screen and (min-width: 0) and (min-width: 835px) {
   div.nav-bar ul li:last-child {
     padding-right: 0;
   }
 }
 
-@media screen and (min-width: 0px) {
+@media screen and (min-width: 0) {
   div.nav-bar ul li a {
     text-decoration: none;
-    color: #F0FFFF;
+    color: #E25D33;
     position: relative;
     padding: 10px;
   }
 }
 
-@media screen and (min-width: 0px) and (min-width: 835px) {
+@media screen and (min-width: 0) and (min-width: 835px) {
   div.nav-bar ul li a:after {
     content: "";
     display: block;
     position: absolute;
     height: 3px;
     width: 0;
-    background-color: #801912;
+    background-color: #F95C2C;
     transition: width 0.5s;
   }
   div.nav-bar ul li a:hover:after {
@@ -77,32 +79,6 @@ html {
 
 .container {
   width: 100%;
-}
-
-.profile {
-  width: 100%;
-  height: calc(100vh - 55px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.profile .img-box {
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.profile .img-box img {
-  height: 200px;
-  width: 200px;
-  transition: all 0.5s ease;
-}
-
-.profile .img-box img:hover {
-  transform: scale(1.1);
-}
-
-@font-face {
-  font-family: Pops;
-  src: url("../fonts/pops.ttf");
+  height: 720px;
+  background-color: #3E606F;
 }

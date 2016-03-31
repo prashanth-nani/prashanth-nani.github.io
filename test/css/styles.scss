@@ -1,112 +1,77 @@
-@import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
-
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-
-@import url(https://fonts.googleapis.com/css?family=Oswald);
-
-$bp1: 835px;
-// $hor-nav-min: 725px;
-$hor-nav-min: 0px;
-
-$nav-item-font-size: 25px;
+@font-face {
+  font-family: "BebasNeue Regular";
+  src: url("../fonts/BebasNeueRegular.ttf");
+}
+$bp1: 835px; // $hor-nav-min: 725px;
+$hor-nav-min: 0;
+$nav-item-font-size: 30px;
 $nav-bar-ul-padding-tb: 15px; //Nav bar padding top, bottom
-$nav-bar-ul-padding-lr: 0;  // Nav bar padding left, right
-
-html{
+$nav-bar-ul-padding-lr: 0; // Nav bar padding left, right
+html {
   box-sizing: border-box;
 }
-
-*, *:before, *:after {
+*,
+*:after,
+*:before {
   box-sizing: inherit;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
-
 @media screen and (min-width: $hor-nav-min) {
   div.nav-bar {
     width: 100%;
-    background-color: #1C1C1C;
-    color: #FFF;
+    background-color: #181717;
     ul {
       width: 60%;
       margin: 0 auto;
       text-align: center;
-      padding: $nav-bar-ul-padding-tb $nav-bar-ul-padding-lr;
+      padding: 20px $nav-bar-ul-padding-lr $nav-bar-ul-padding-tb;
       li {
         list-style: none;
         text-align: center;
-        font-family: 'Luckiest Guy', sans-serif;
+        font-family: "BebasNeue Regular", sans-serif;
+        letter-spacing: 3px;
+        font-weight: 700;
         font-size: $nav-item-font-size;
-
         @media screen and (max-width: $bp1) {
           font-size: 20px;
           display: block;
         }
-
         position: relative;
         padding-right: 15px;
         display: inline-block;
         transition: bottom 0.5s ease;
-        @media screen and (min-width: $bp1){
-        &:hover {
-          bottom: -5px;
+        @media screen and (min-width: $bp1) {
+          &:last-child {
+            padding-right: 0;
+          }
         }
-        &:last-child {
-          padding-right: 0;
-        }
-      }
         a {
           text-decoration: none;
-          // color: #038C7F;
-          color: #F0FFFF;
+          color: #E25D33;
           position: relative;
           padding: 10px;
-          @media screen and (min-width: $bp1){
-          &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            height: 3px;
-            width: 0;
-            background-color: #801912;
-            transition: width 0.5s;
+          @media screen and (min-width: $bp1) {
+            &:after {
+              content: "";
+              display: block;
+              position: absolute;
+              height: 3px;
+              width: 0;
+              background-color: #F95C2C;
+              transition: width 0.5s;
+            }
+            &:hover:after {
+              width: 100%;
+            }
           }
-          &:hover:after {
-            width: 100%;
-          }
-        }
         }
       }
     }
   }
 }
-
-.container{
+.container {
   width: 100%;
-}
-
-.profile{
-  width: 100%;
-  height: calc(100vh - 55px); //Remove nav-bar height with padding
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .img-box{
-    border-radius: 50%;
-    overflow: hidden;
-    img{
-    height: 200px;
-    width: 200px;
-    //border-radius: 50%;
-    transition: all 0.5s ease;
-    &:hover{
-      transform: scale(1.1);
-    }
-  }
-}
-}
-
-@font-face {
-    font-family: Pops;
-    src: url("../fonts/pops.ttf");
+  height: 720px;
+  background-color: #3E606F;
 }
