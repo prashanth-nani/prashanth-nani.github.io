@@ -27,3 +27,19 @@ body{
 .social{
 	margin-bottom: 25px;
 }
+
+.label{
+	background-color: #0D1522;
+	width: 150px;
+	text-align: center;
+	padding: 5px;
+	font-size: 20px;
+	font-family: Helvetica;
+	text-transform: uppercase;
+	color: #FFF;
+	position: fixed;
+	top: 25px;
+	left: -40px;
+	font-weight: bold;
+	transform: rotate(-45deg);
+}
