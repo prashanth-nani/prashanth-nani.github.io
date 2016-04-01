@@ -1,3 +1,0 @@
-ErrorDocument 404 /prashanth/test/errors/404.html
-ErrorDocument 403 /prashanth/test/errors/404.html
-Options -Indexes
