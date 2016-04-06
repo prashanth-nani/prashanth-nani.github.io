@@ -14,6 +14,7 @@ $nav-bar-ul-padding-tb: 15px; //Nav bar padding top, bottom
 $nav-bar-ul-padding-lr: 0; // Nav bar padding left, right
 html {
   box-sizing: border-box;
+  font-family: "BebasNeue Regular", sans-serif;
 }
 *,
 *:after,
@@ -25,9 +26,11 @@ html {
 @media screen and (min-width: $hor-nav-min) {
   div.nav-bar {
     width: 100%;
-    background-color: #181717;
+    // background-color: #181717;
+    position: fixed;
     ul {
-      width: 60%;
+      width: 60%; //Rem
+      width: 95%;
       margin: 0 auto;
       text-align: center;
       padding: 20px $nav-bar-ul-padding-lr $nav-bar-ul-padding-tb;
@@ -41,9 +44,11 @@ html {
         @media screen and (max-width: $bp1) {
           font-size: 20px;
           display: block;
+          margin-bottom: 10px;
+          padding-right: 0;
         }
         position: relative;
-        padding-right: 15px;
+        padding-right: 110px;
         display: inline-block;
         transition: bottom 0.5s ease;
         @media screen and (min-width: $bp1) {
@@ -53,7 +58,9 @@ html {
         }
         a {
           text-decoration: none;
-          color: #E25D33;
+          // color: #E25D33;
+          // color: #FFF;
+          color: #C8CED0;
           position: relative;
           padding: 10px;
           @media screen and (min-width: $bp1) {
@@ -64,7 +71,9 @@ html {
               height: 3px;
               width: 0;
               // background-color: #F95C2C;
-              background-color: #E25D33;
+              // background-color: #E25D33;
+              // background-color: #FFF;
+              background-color: #C8CED0;
               transition: width 0.5s;
             }
             &:hover:after {
@@ -79,29 +88,72 @@ html {
 
 div.container {
   width: 100%;
-  color: #FFF;
+  // color: #FFF;
+  color: #C8CED0;
   .home {
     .intro {
-      background-color: #3E606F;
-      text-align: center;
+      /* Background */
+      background: linear-gradient(rgba(25, 52, 65, 0.5), rgba(25, 52, 65, 0.5)),
+      url("../images/bg.jpg");
+      // url("https://images.unsplash.com/photo-1451417379553-15d8e8f49cde?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=743b5c294daa74ebb1dfda160bd34c0c");
+      background-position: 50% 75%;
+      background-size: cover;
+
+      /* Display */
       display: flex;
+      text-align: center;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+
+      /* Dimensions */
       width: 100%;
-      height: calc(100vh - 60px);
+      min-height: 100vh;
       margin: 0 auto;
-      border: 1px solid #000;
       .greet{
+        $greet-font-size: 20px;
+        @media screen and (max-width: $bp1){
+          $greet-font-size: 15px;
+        }
         font-family: 'Open Sans', sans-serif;
-        font-size: 20px;
+        font-size: $greet-font-size;
         font-style: italic;
+        line-height: 3;
+        &:before, &:after{
+          content: "";
+          display: inline-block;
+          margin-bottom: 5px;
+          width: 60px;
+          height: 1.5px;
+          @media screen and (max-width: $bp1){
+            margin-bottom: 5px;
+            width: 40px;
+            height: 1px;
+          }
+          // background: #FFF;
+          background: #C8CED0;
+        }ho
+        &::before{
+          margin-right: 7px;
+        }
+        &::after{
+          margin-left: 7px;
+        }
       }
       .name{
         font-family: "BebasNeue Bold";
         font-size: 55px;
         font-weight: 900;
         letter-spacing: 2px;
+        @media screen and (max-width: $bp1){
+          font-size: 35px;
+        }
+      }
+      .details{
+        letter-spacing: 2px;
+        @media screen and (max-width: $bp1){
+          letter-spacing: 1.2px;
+        }
       }
     }
   }
