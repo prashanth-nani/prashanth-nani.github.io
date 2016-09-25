@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+//@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @font-face {
   font-family: "BebasNeue Regular";
   src: url("../fonts/BebasNeueRegular.ttf");
@@ -24,12 +24,12 @@ html {
   padding: 0;
 }
 @media screen and (min-width: $hor-nav-min) {
-  div.nav-bar {
+  div#nav-bar {
     width: 100%;
     // background-color: #181717;
     position: fixed;
     ul {
-      width: 60%; //Rem
+      //width: 60%; //Rem
       width: 95%;
       margin: 0 auto;
       text-align: center;
@@ -43,12 +43,15 @@ html {
         font-size: $nav-item-font-size;
         @media screen and (max-width: $bp1) {
           font-size: 20px;
-          display: block;
+          display: none;
           margin-bottom: 10px;
           padding-right: 0;
         }
         position: relative;
         padding-right: 110px;
+        @media screen and (max-width: 1024px) {
+          padding-right: 60px;
+        }
         display: inline-block;
         transition: bottom 0.5s ease;
         @media screen and (min-width: $bp1) {
@@ -58,12 +61,10 @@ html {
         }
         a {
           text-decoration: none;
-          // color: #E25D33;
-          // color: #FFF;
           color: #C8CED0;
           position: relative;
           padding: 10px;
-          @media screen and (min-width: $bp1) {
+          @media screen and (min-width: 1024px) {
             &:after {
               content: "";
               display: block;
@@ -86,7 +87,7 @@ html {
   }
 }
 
-div.container {
+div#container {
   width: 100%;
   // color: #FFF;
   color: #C8CED0;
@@ -132,7 +133,7 @@ div.container {
           }
           // background: #FFF;
           background: #C8CED0;
-        }ho
+        }
         &::before{
           margin-right: 7px;
         }
