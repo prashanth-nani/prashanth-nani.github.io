@@ -16,11 +16,13 @@ $(document).ready(function(){
         this.classList.remove("is-active");
         document.querySelector('#nav-overlay').style.width = '0%';
         document.querySelector('#main-container').className = '';
+        document.querySelector('body').style.overflow = 'auto';
       }
       else{
           this.classList.add("is-active");
           document.querySelector('#nav-overlay').style.width = '100%';
           document.querySelector('#main-container').className = 'animate';
+          document.querySelector('body').style.overflow = 'hidden';
       }
     });
   }
