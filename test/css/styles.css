@@ -249,3 +249,42 @@ div#main-container div#container .home .intro .details {
     letter-spacing: 1.2px;
   }
 }
+
+div#main-container div#container .home #scroll-btn {
+  position: absolute;
+  bottom: 40px;
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  transform: rotate(-45deg);
+  margin: 0 auto;
+  display: inline-block;
+  border-bottom: 1px solid #FFF;
+  border-left: 1px solid #FFF;
+  -webkit-animation: sdb 1.5s infinite;
+  animation: sdb 1.5s infinite;
+}
+
+@-webkit-keyframes sdb {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+}
+
+@keyframes sdb {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+}
