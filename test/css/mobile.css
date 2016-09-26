@@ -1,17 +1,12 @@
 div#nav-overlay {
   position: fixed;
-  top: 100vh;
-  left: 0;
-  width: 100%;
+  left: 0%;
+  width: 0%;
+  overflow: hidden;
   height: 100vh;
-  background-color: #37424e;
+  background-color: rgba(55, 66, 78, 0.7);
   z-index: 10;
-}
-
-div#nav-overlay div#menu-button {
-  width: 100px;
-  height: 100px;
-  border: 1px solid #FFF;
+  transition: width 0.3s;
 }
 
 div#nav-overlay ul {
@@ -30,4 +25,8 @@ div#nav-overlay ul li a {
   text-decoration: none;
   letter-spacing: 2px;
   color: #FFF;
+}
+
+.animate {
+  transform: translateZ(-1500px) rotateX(80deg);
 }
