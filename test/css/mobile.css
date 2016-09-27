@@ -26,7 +26,3 @@ div#nav-overlay ul li a {
   letter-spacing: 2px;
   color: #FFF;
 }
-
-.animate {
-  transform: translateZ(-1500px) rotateX(80deg);
-}

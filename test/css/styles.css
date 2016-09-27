@@ -21,12 +21,6 @@ html {
   padding: 0;
 }
 
-body {
-  background-color: #174c58;
-  -webkit-perspective: 1500px;
-  perspective: 1500px;
-}
-
 div#menu-button {
   position: fixed;
   top: 3vh;
@@ -97,24 +91,35 @@ div#menu-button div.c-hamburger.is-active span:after, div#menu-button div.c-hamb
   transition-delay: 0s, 0.3s;
 }
 
-div#main-container {
-  transition: transform 0.5s;
-  transform-origin: 50% 150%;
+div#scroll-btn {
+  position: fixed;
+  z-index: 10;
+  top: 90vh;
+  left: calc(50% - 10px);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  transform: rotate(-45deg);
+  margin: 0 auto;
+  border-bottom: 1px solid #FFF;
+  border-left: 1px solid #FFF;
+  -webkit-animation: sdb 1.5s infinite;
+  animation: sdb 1.5s infinite;
 }
 
 @media screen and (min-width: 0) {
-  div#main-container div#nav-bar {
+  div#main-container #nav-wrap #nav-bar {
     width: 100%;
     position: fixed;
   }
-  div#main-container div#nav-bar ul {
+  div#main-container #nav-wrap #nav-bar ul {
     width: 95%;
     display: inline-block;
     margin: 0 auto;
     text-align: center;
     padding: 20px 0 15px;
   }
-  div#main-container div#nav-bar ul li {
+  div#main-container #nav-wrap #nav-bar ul li {
     list-style: none;
     text-align: center;
     font-family: "BebasNeue Regular", sans-serif;
@@ -129,7 +134,7 @@ div#main-container {
 }
 
 @media screen and (min-width: 0) and (max-width: 835px) {
-  div#main-container div#nav-bar ul li {
+  div#main-container #nav-wrap #nav-bar ul li {
     font-size: 20px;
     display: none;
     margin-bottom: 10px;
@@ -138,19 +143,19 @@ div#main-container {
 }
 
 @media screen and (min-width: 0) and (max-width: 1024px) {
-  div#main-container div#nav-bar ul li {
+  div#main-container #nav-wrap #nav-bar ul li {
     padding-right: 60px;
   }
 }
 
 @media screen and (min-width: 0) and (min-width: 835px) {
-  div#main-container div#nav-bar ul li:last-child {
+  div#main-container #nav-wrap #nav-bar ul li:last-child {
     padding-right: 0;
   }
 }
 
 @media screen and (min-width: 0) {
-  div#main-container div#nav-bar ul li a {
+  div#main-container #nav-wrap #nav-bar ul li a {
     text-decoration: none;
     color: #C8CED0;
     position: relative;
@@ -159,7 +164,7 @@ div#main-container {
 }
 
 @media screen and (min-width: 0) and (min-width: 1024px) {
-  div#main-container div#nav-bar ul li a:after {
+  div#main-container #nav-wrap #nav-bar ul li a:after {
     content: "";
     display: block;
     position: absolute;
@@ -168,7 +173,7 @@ div#main-container {
     background-color: #C8CED0;
     transition: width 0.5s;
   }
-  div#main-container div#nav-bar ul li a:hover:after {
+  div#main-container #nav-wrap #nav-bar ul li a:hover:after {
     width: 100%;
   }
 }
@@ -178,7 +183,7 @@ div#main-container div#container {
   color: #C8CED0;
 }
 
-div#main-container div#container .home .intro {
+div#main-container div#container #home > div {
   /* Background */
   background: linear-gradient(rgba(25, 52, 65, 0.5), rgba(25, 52, 65, 0.5)), url("../images/bg.jpg");
   background-position: 50% 75%;
@@ -195,14 +200,14 @@ div#main-container div#container .home .intro {
   margin: 0 auto;
 }
 
-div#main-container div#container .home .intro .greet {
+div#main-container div#container #home > div div:first-child {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   font-style: italic;
   line-height: 3;
 }
 
-div#main-container div#container .home .intro .greet:after, div#main-container div#container .home .intro .greet:before {
+div#main-container div#container #home > div div:first-child:after, div#main-container div#container #home > div div:first-child:before {
   content: "";
   display: inline-block;
   margin-bottom: 5px;
@@ -212,22 +217,22 @@ div#main-container div#container .home .intro .greet:after, div#main-container d
 }
 
 @media screen and (max-width: 835px) {
-  div#main-container div#container .home .intro .greet:after, div#main-container div#container .home .intro .greet:before {
+  div#main-container div#container #home > div div:first-child:after, div#main-container div#container #home > div div:first-child:before {
     margin-bottom: 5px;
     width: 40px;
     height: 1px;
   }
 }
 
-div#main-container div#container .home .intro .greet::before {
+div#main-container div#container #home > div div:first-child::before {
   margin-right: 7px;
 }
 
-div#main-container div#container .home .intro .greet::after {
+div#main-container div#container #home > div div:first-child::after {
   margin-left: 7px;
 }
 
-div#main-container div#container .home .intro .name {
+div#main-container div#container #home > div h1 {
   font-family: "BebasNeue Bold";
   font-size: 55px;
   font-weight: 900;
@@ -235,34 +240,36 @@ div#main-container div#container .home .intro .name {
 }
 
 @media screen and (max-width: 835px) {
-  div#main-container div#container .home .intro .name {
+  div#main-container div#container #home > div h1 {
     font-size: 35px;
   }
 }
 
-div#main-container div#container .home .intro .details {
+div#main-container div#container #home > div div:last-child {
   letter-spacing: 2px;
 }
 
 @media screen and (max-width: 835px) {
-  div#main-container div#container .home .intro .details {
+  div#main-container div#container #home > div div:last-child {
     letter-spacing: 1.2px;
   }
 }
 
-div#main-container div#container .home #scroll-btn {
-  position: absolute;
-  bottom: 40px;
-  left: calc(50% - 10px);
-  width: 20px;
-  height: 20px;
-  transform: rotate(-45deg);
-  margin: 0 auto;
-  display: inline-block;
-  border-bottom: 1px solid #FFF;
-  border-left: 1px solid #FFF;
-  -webkit-animation: sdb 1.5s infinite;
-  animation: sdb 1.5s infinite;
+div#main-container div#container .section {
+  height: 100vh;
+  width: 100%;
+}
+
+div#main-container div#container #portfolio {
+  background-color: #2a501a;
+}
+
+div#main-container div#container #about {
+  background-color: #1a4e57;
+}
+
+div#main-container div#container #contact {
+  background-color: #67790d;
 }
 
 @-webkit-keyframes sdb {

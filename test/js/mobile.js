@@ -1,31 +1,13 @@
 $(document).ready(function(){
-
   "use strict";
 
-  var toggles = document.querySelectorAll(".c-hamburger");
+  var section = document.getElementsByClassName('section');
+  
+  var toggle = document.querySelector(".c-hamburger");
+  hamburgerHandler(toggle);
 
-  for (var i = toggles.length - 1; i >= 0; i--) {
-    var toggle = toggles[i];
-    toggleHandler(toggle);
-  };
-
-  function toggleHandler(toggle) {
-    toggle.addEventListener( "click", function(e) {
-      e.preventDefault();
-      if (this.classList.contains("is-active") === true){
-        this.classList.remove("is-active");
-        document.querySelector('#nav-overlay').style.width = '0%';
-        document.querySelector('#main-container').className = '';
-        document.querySelector('body').style.overflow = 'auto';
-      }
-      else{
-          this.classList.add("is-active");
-          document.querySelector('#nav-overlay').style.width = '100%';
-          document.querySelector('#main-container').className = 'animate';
-          document.querySelector('body').style.overflow = 'hidden';
-      }
-    });
-  }
+  var scroll = document.getElementById('scroll-btn');
+  scrollBtnHandler(scroll);
 
   var navul = document.getElementById('nav-bar').children[0].cloneNode(true);
   document.getElementById('nav-overlay').appendChild(navul);
