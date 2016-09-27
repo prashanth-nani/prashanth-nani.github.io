@@ -258,6 +258,8 @@ div#main-container div#container #home > div div:last-child {
 div#main-container div#container .section {
   height: 100vh;
   width: 100%;
+  transition: transform 0.5s;
+  transform-origin: 50% 10%;
 }
 
 div#main-container div#container #portfolio {

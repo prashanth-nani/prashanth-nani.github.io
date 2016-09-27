@@ -246,6 +246,8 @@ div#main-container {
         .section {
             height: 100vh;
             width: 100%;
+            transition: transform 0.5s;
+            transform-origin: 50% 10%;
         }
         #portfolio {
             background-color: #2a501a;
