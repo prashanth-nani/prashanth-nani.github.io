@@ -1,1 +1,0 @@
-div#nav-overlay{position:fixed;left:0%;width:0%;overflow:hidden;height:100vh;background-color:rgba(55,66,78,0.7);z-index:10;transition:width 0.3s}div#nav-overlay ul{width:95%;margin:80px auto 0;text-align:center}div#nav-overlay ul li{list-style:none;padding-bottom:10vh;font-size:30px}div#nav-overlay ul li a{text-decoration:none;letter-spacing:2px;color:#FFF}
